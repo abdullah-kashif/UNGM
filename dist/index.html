@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UNGM Code Finder</title>
+  <meta name="description" content="Find UNGM goods and services codes through simple guided steps. Search by name or code and copy your final result.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script><script src="model.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to choices</a>
+  <header class="masthead"><div class="masthead-inner">
+    <a class="brand" href="#" aria-label="UNGM Code Finder home"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 6h8v8H5zM17 6h8v8h-8zM5 18h8v8H5z"/><path d="m18 21 3 3 6-7"/></svg><span>Code Finder<span class="brand-note">UNGM goods & services</span></span></a>
+    <button class="text-button help-toggle" id="help-toggle" aria-expanded="false" aria-controls="help">How to use this</button>
+  </div></header>
+  <main class="shell">
+    <section class="intro" aria-labelledby="page-title"><h1 id="page-title">Find the right code.<br><span>One choice at a time.</span></h1><p>Browse the categories below, or search if you already know what you need.</p></section>
+    <section id="help" class="help-box" hidden><h2>A few simple steps</h2><ol><li><strong>Choose a category.</strong> Pick the area closest to your goods or services.</li><li><strong>Narrow it down.</strong> Each choice opens a smaller, more specific list.</li><li><strong>Copy the list.</strong> Use the button at the bottom of any category or group, then paste into Excel.</li></ol><p>You can go back at any time. Search works across the full directory.</p></section>
+    <section class="search-area" aria-label="Search the directory">
+      <form id="search-form" role="search"><label class="search-label" for="search">What are you looking for?</label><div class="search-line"><div class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="Try “office furniture” or a code" autocomplete="off" spellcheck="false"><button id="clear-search" class="clear-search" type="button" aria-label="Clear search" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg></button></div><button class="primary search-submit" type="submit">Search</button></div></form>
+      <div class="search-bottom"><div class="examples"><span>Try:</span><button type="button" data-example="furniture">Furniture</button><button type="button" data-example="transport">Transport</button><button type="button" data-example="medical">Medical supplies</button></div><span id="data-label" class="data-label">Loading directory…</span></div>
+    </section>
+    <section id="content" class="workspace" aria-label="Code directory" tabindex="-1"><div class="loading-state">Preparing the categories…</div></section>
+    <section id="manual-copy" class="manual-copy" hidden aria-labelledby="manual-title"><h2 id="manual-title">Copy this text</h2><p>Your browser did not allow automatic copying. Select the text below and copy it.</p><textarea id="manual-text" readonly rows="3"></textarea><button type="button" class="text-button" id="close-manual">Close</button></section>
+    <noscript><p class="help-box">Please enable JavaScript to browse and search this directory.</p></noscript>
+    <footer><span>UNGM code directory · Data exported 16 October 2026</span><a href="https://www.ungm.org/Public/UNSPSC" target="_blank" rel="noopener noreferrer">View the source on UNGM<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M19 5l-9 9M10 5H5v14h14v-5"/></svg></a><span>Independent browsing tool</span></footer>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body></html>
