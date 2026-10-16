@@ -9,6 +9,10 @@ Complete source code for the published app, including the latest Excel-copy chan
 
 No build step or package installation is required. If your browser blocks automatic clipboard copying when opened as a local file, the app shows selectable text for manual copying. Hosting the `dist` folder on HTTPS supports the normal clipboard workflow.
 
+## Deploy to Netlify
+
+The repository includes `netlify.toml`, which tells Netlify to publish the `dist` directory. There is no build command or package installation step. Connect this repository to Netlify and deploy with the default settings, or drag the `dist` folder into Netlify Drop.
+
 ## Files
 
 - `dist/index.html` — page structure.
